@@ -1,0 +1,10 @@
+SCHEMA >
+    `timestamp` DateTime,
+    `session_id` String,
+    `action` LowCardinality(String),
+    `version` LowCardinality(String),
+    `payload` String
+
+ENGINE MergeTree
+ENGINE_PARTITION_KEY toYear(timestamp)
+ENGINE_SORTING_KEY timestamp, session_id, payload
