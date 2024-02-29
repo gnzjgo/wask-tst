@@ -1,0 +1,9 @@
+TOKEN "scheduled_copy_t_496e7bf6641e4f17a8979e17e4104290" READ
+
+NODE untitled_pipe_7648_0
+SQL >
+    SELECT * FROM analytics_events
+
+TYPE COPY
+TARGET_DATASOURCE copy_untitled_pipe_7648
+COPY_SCHEDULE 1 1 1 1 1
